@@ -19,13 +19,26 @@ export const metadata: Metadata = {
   description: "Search, read and save books",
 };
 
+const themeScript = `
+  (function() {
+    try {
+      var theme = localStorage.getItem('ui-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+    } catch (e) {}
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${plusJakartaSans.variable} ${manrope.variable}`}>
         <ThemeProvider>
           <Header />
