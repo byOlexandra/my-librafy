@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-secondary);
+}
+
+.logo {
+    color: var(--accent);  
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--fs-h3);
+    letter-spacing: 0.03em; 
+    margin-right: auto;
+
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: var(--accent-hover);
+    }
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-right: 24px;
+}
+

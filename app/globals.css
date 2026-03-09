@@ -1,0 +1,132 @@
+:root {
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Backgrounds */
+  --bg-primary: #f6f7fb;
+  --bg-secondary: #ffffff;
+
+  /* Accent */
+  --accent: #5b6cff;
+  --accent-hover: #4856e0;
+  --accent-soft: #eef0ff;
+
+  /* Secondary Accent */
+  --accent-secondary: #2ec4b6;
+  --accent-secondary-soft: #e8fbf8;
+
+  /* Text */
+  --text-main: #1f2933;
+  --text-secondary: #52606d;
+
+  /* Status */
+  --status-reading: #2ec4b6;
+  --status-want: #f6ad55;
+  --status-finished: #68d391;
+
+  /* UI */
+  --border: #e4e7eb;
+  --skeleton: #eceff3;
+
+  /* Rating */
+  --rating-star: #f6c945;
+
+  /* Shadows */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  --fs-h1: 2rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.8125rem;
+
+  @media only screen and (min-width: 768px) {
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.75rem;
+    --fs-body: 1.125rem;
+    --fs-small: 0.875rem;
+  }
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --accent: #818CF8;
+  --accent-hover: #6366F1;
+  --accent-soft: rgba(129, 140, 248, 0.12);
+  --accent-secondary: #2DD4BF;
+  --accent-secondary-soft: rgba(45, 212, 191, 0.12);
+  --text-main: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --status-reading: #2DD4BF;
+  --status-want: #FB923C;
+  --status-finished: #4ADE80;
+  --border: #334155;
+  --skeleton: #2A3443;
+  --rating-star: #FACC15;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-main);
+  background: var(--bg-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
